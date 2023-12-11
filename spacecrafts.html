@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Космичес    <link rel="icon" type="image/x-icon" href="favicon.ico">  <!--Фавиконка-->
+        <link rel="stylesheet" type="text/css" href="style.css">  <!--Стили-->кие аппараты</title>  <!--Заголовок страницы-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .notification-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50px;
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .notification-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .list-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+
+        .list {
+            list-style: none;
+            padding: 0;
+        }
+
+
+        .list li {
+            margin-bottom: 10px;
+        }
+
+
+        .add-btn {
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .notification-plus {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .notification-close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <section class="top-nav">
+        <div id="logo-div">
+            <a href="#"><img alt="Логотип сайта" src="favicon.ico"></a>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li><a class="menu-a" href="#hubble">Космический телескоп "Хаббл"</a></li>
+            <li><a class="menu-a" href="#new-horizons">Новые горизонты</a></li>
+            <li><a class="menu-a" href="#apollo-15">Апполон 15</a></li>
+            <li><a href="form.html" class="menu-a nav-link-signin">Регистрация</a></li>
+        </ul>
+    </section>
+</header>
+<main>
+    <h1 id="header">Космические летательные аппараты</h1>
+    <section>  <!--Начальный раздел-->
+        <h2>Введение</h2>
+        <section id="start-section">
+            <p>
+                <b>Космический аппарат</b> - это <em>пилотируемое или беспилотное техническое средство</em>,
+                предназначенное для <em>исследования космического пространства</em>.
+                Такие аппараты разрабатываются и отправляются в космос с различными целями,
+                включая <em>изучение других планет и их спутников</em>,
+                <em>наблюдение за звёздами и галактиками</em>,
+                а также <em>проведение научных экспериментов в невесомости</em>.
+                Космические аппараты играют <em>важную роль в расширении нашего понимания Вселенной</em>
+                и помогают углубить научные знания о космосе и нашей солнечной системе.
+            </p>
+            <aside>
+                <p>Путь космического аппарата может выглядеть так:</p>
+                <ol>
+                    <li>Запуск с Земли</li>
+                    <li>Манёвры для выхода на орбиту</li>
+                    <li>Транзит к целевой планете</li>
+                    <li>Посадка на поверхность</li>
+                </ol>
+            </aside>
+        </section>
+    </section>
+    <article>  <!--Статья о классификации космических аппаратов-->
+        <h2>Классификация космических аппаратов</h2>
+        Среди космических аппаратов выделяют:
+        <dl>  <!--Список определений-->
+            <dt>Искусственные спутники Земли</dt>
+            <dd>Общее название для всех аппаратов, вращающихся вокруг Земли</dd>
+
+            <dt><abbr title="Автоматические межпланетные станции">АМС</abbr></dt>
+            <dd>Аппараты, осуществляющие перелёт между Землёй и другими космическими телами солнечной системы</dd>
+            <dd>Беспилотные космические аппараты, предназначенные для полёта в межпланетном космическом пространстве</dd>
+
+            <dt>Орбитальные станции</dt>
+            <dd>Аппараты, предназначенные для долговременного пребывания и работы людей на орбите Земли</dd>
+
+            <dt>Пилотируемые корабли</dt>
+            <dd>Аппараты, используемые для доставки грузов и человека на орбиту</dd>
+            <dd>Аппараты, управляемые человеком без участия <a href="https://ru.wikipedia.org/wiki/Центр_управления_полётами">Центра Управления Полётами</a></dd>
+
+            <dt>Спускаемые аппараты</dt>
+            <dd>Аппараты, используемые для спуска полезной нагрузки с орбиты и мягкой посадки на поверхность</dd>
+        </dl>
+        <aside>
+            При проектировании космического аппарата стоит учитывать следующее:
+            <ul>  <!--Маркированный список-->
+                <li>
+                    <p>Уравнение движения планеты можно выразить как F = G * (m<sub>1</sub> * m<sub>2</sub>) / r<sup>2</sup>, где F - сила притяжения, G - гравитационная постоянная, m<sub>1</sub> и m<sub>2</sub> - массы объектов, а r - расстояние между ними.</p>
+                </li>
+                <li>
+                    <p>Скорость света в вакууме составляет около 299,792,458 метров в секунду (3 x 10<sup>8</sup> м/с).</p>
+                </li>
+            </ul>
+        </aside>
+    </article>
+    <article>  <!--Статья с информацией о существующих космических аппаратах-->
+        <h2 id="spacecrafts">Известные космические аппараты</h2>
+        <section id="hubble" class="anchor">  <!--Раздел про телескоп "Хаббл"-->
+            <h3>Космический телескоп "Хаббл"</h3>
+
+            <!--                <div class="row-container">-->
+            <!--                    <img id="img-hubble" src="images/Hubble.jpeg" alt="Вид &quot;Хаббла&quot; с борта космического корабля">-->
+            <!--                    <div>-->
+            <!--                        <p><b>Космический телескоп Хаббл</b> - это космический телескоп, запущенный в 1990 году.</p>-->
+            <!--                        <section>  &lt;!&ndash;Раздел об открытиях телескопа&ndash;&gt;-->
+            <!--                        <h4>Открытия</h4>-->
+            <!--                        <p>Космический телескоп Хаббл сделал множество важных открытий, включая:</p>-->
+            <!--                            <ol type="I" start="5">  &lt;!&ndash;Нестандартный нумерованный список&ndash;&gt;-->
+            <!--                                <li>Фотографии далеких галактик и планет</li>-->
+            <!--                                <li>Изучение темной материи</li>-->
+            <!--                                <li>Определение возраста Вселенной</li>-->
+            <!--                            </ol>-->
+            <!--                        </section>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <div class="container">
+                <img id="img-hubble" src="images/Hubble.jpeg" alt="Вид &quot;Хаббла&quot; с борта космического корабля">
+                <div>
+                    <p><b>Космический телескоп Хаббл</b> - это космический телескоп, запущенный в 1990 году.</p>
+                    <section>  <!--Раздел об открытиях телескопа-->
+                        <h4>Открытия</h4>
+                        <p>Космический телескоп Хаббл сделал множество важных открытий, включая:</p>
+                        <!--                        <ol type="I" start="5">  &lt;!&ndash;Нестандартный нумерованный список&ndash;&gt;-->
+                        <!--                            <li>Фотографии далеких галактик и планет</li>-->
+                        <!--                            <li>Изучение темной материи</li>-->
+                        <!--                            <li>Определение возраста Вселенной</li>-->
+                        <!--                        </ol>-->
+                        <ul id="li-hubble">
+                            <li>Фотографии далеких галактик и планет</li>
+                            <li>Изучение темной материи</li>
+                            <li>Определение возраста Вселенной</li>
+                        </ul>
+                    </section>
+                </div>
+                <p>
+                    Одна из сложнейших миссий за всю историю – первая, которая проводилась в декабре 1993 года. Вскоре после запуска телескопа было обнаружено, что изображения приходят нечёткими, но так как это первый телескоп, который предназначен для посещения астронавтами в космосе, уже в 1993 году туда отправилась команда космонавтов, чтобы установить корректирующую оптику. Только за время этой миссии астронавты выходили в космос 5 раз. Уже в январе следующего года были получены первые чёткие снимки. Во время второй экспедиции, которая началась 11 февраля 1997 года, был заменён спектрограф тусклых объектов, а также вышедшее из строя оборудование. Это расширило возможности Хаббла, что позволило пронаблюдать за самыми далекими уголками Вселенной. Третья миссия была разделена на две части, первая из которых проводилась в 1999 году, а другая – в 2002. Выход в космос в 1999 году изначально планировался как профилактический, но оказалось, что вышел из строя один из гироскопов, необходимо было заменить его и солнечные панели, а также была произведена установка усовершенствованной камеры для обзоров. Последняя же на данный момент миссия – четвёртая, если считать предыдущую за одну, состоялась в 2009 году, за время которой были установлены новые инструменты, которые улучшают обзор телескопа, а также батареи, что продлит работу телескопа ещё на долгие годы.
+                </p>
+            </div>
+        </section>
+        <section id="new-horizons" class="anchor">  <!--Раздел про аппарат "Новые горизонты"-->
+            <h3>Новые горизонты</h3>
+            <!--Изображение с ссылкой на внешний ресурс-->
+            <div class="row-container container">
+                <a href="https://ru.wikipedia.org/wiki/Новые_горизонты">
+                    <img id="img-new-horizons" alt="Аппарат &quot;Новые горизонты&quot;" src="https://epizodsspace.airbase.ru/01/2u/solnthe/ams/novye_gorizonty/novye_gorizonty.jpg">
+                </a>
+                <div>
+                    <section id="overview">
+                        <h4>Обзор</h4>
+                        <p>Аппарат &quot;Новые горизонты&quot; - это космический аппарат, разработанный НАСА для исследования Плутона и его спутников.</p>
+                    </section>
+                    <section>
+                        <h4>Миссия</h4>
+                        <p>Основной целью миссии &quot;Новые горизонты&quot; было исследование Плутона и других объектов в поясе Койпера, включая астероиды и кометы.</p>
+                    </section>
+                    <section>
+                        <h4>Научные инструменты</h4>
+                        <p>Аппарат &quot;Новые горизонты&quot; оснащен различными научными инструментами:</p>
+                        <!--Маркированный список, вложенный в нумерованный-->
+                        <ol>
+                            <li>Лучезарядный измеритель плазмы (SWAP)</li>
+                            <li>Сканер гамма-спектрометра (LORRI)</li>
+                            <li>Спектрометр визуального и инфракрасного диапазона (Ralph)</li>
+                            <li>
+                                И другие инструменты:
+                                <ul>
+                                    <li>Аппарат для съемки поверхности Плутона (MVIC)</li>
+                                    <li>Инфракрасный спектрометр (LEISA)</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <section id="apollo-15" class="anchor">  <!--Раздел про "Апполон-15"-->
+            <h3>Апполон 15</h3>
+            <div class="row-container container">
+                <div>
+                    <section>
+                        <h4>Обзор</h4>
+                        <p>Миссия Аполлон 15 была одной из миссий программы &quot;Аполлон&quot; НАСА, которая <u>осуществила посадку человека на Луну.</u></p>
+                    </section>
+                    <section>
+                        <h4>Цель миссии</h4>
+                        <p>Основной целью миссии Аполлон 15 было <strong>исследование поверхности Луны</strong> и сбор научных данных о её геологии и составе.</p>
+                    </section>
+                    <section>
+                        <h4>Экипаж</h4>
+                        <p>Экипаж миссии Аполлон 15 включал следующих астронавтов:</p>
+                        <ul>
+                            <li>Дэвид Р. Скотт (командир миссии)</li>
+                            <li>Джеймс Ирвин (пилот командного модуля)</li>
+                            <li>Альфред Уорден (пилот лунного модуля)</li>
+                        </ul>
+                    </section>
+                </div>
+                <!--Фотография с картой изображения-->
+                <img id="img-apollo" alt="Астронавт Джеймс Ирвин уставнавливает флаг на поверхности Луны" src="images/apollo-15.jpg" usemap="#image-map">
+                <map name="image-map">
+                    <area target="_blank" alt="Джеймс Ирвин" title="Джеймс Ирвин" href="https://ru.wikipedia.org/wiki/Ирвин,_Джеймс" coords="106,138,220,363" shape="rect">
+                    <area target="_blank" alt="Лунный модуль" title="Лунный модуль" href="https://ru.wikipedia.org/wiki/Лунный_модуль" coords="513,169,156" shape="circle">
+                    <area target="_blank" alt="Лунный автомобиль" title="Лунный автомобиль" href="https://ru.wikipedia.org/wiki/Лунный_автомобиль" coords="565,366,597,369,613,342,744,350,751,382,777,383,794,306,779,298,777,217,757,253,728,249,729,203,779,190,776,165,753,148,722,142,688,142,666,157,674,182,703,201,701,240,673,252,643,251,605,259,578,280,557,315,559,329,558,343" shape="poly">
+                </map>
+            </div>
+            <blockquote>
+                <p>Экипажу Аполлона 15 принадлежит фраза: "<cite>Мы исследовали Луну, но открыли ещё больше загадок о нашей планете Земля</cite>".</p>
+            </blockquote>
+        </section>
+    </article>
+    <div class="gallery">
+        <h1>Галлерея</h1>
+        <div class="image-gallery">
+            <div class="column">
+                <div class="image-item"><img src="images/1.webp" alt=""/></div>
+                <div class="image-item"><img src="images/8.jpeg" alt=""/></div>
+                <div class="image-item"><img src="images/6.webp" alt=""/></div>
+            </div>
+            <div class="column">
+                <div class="image-item"><img src="images/4.png" alt=""/></div>
+                <div class="image-item"><img src="images/5.jpeg" alt=""/></div>
+            </div>
+            <div class="column">
+                <div class="image-item"><img src="images/2.jpeg" alt=""/></div>
+                <div class="image-item"><img src="images/7.jpeg" alt=""/></div>
+                <div class="image-item"><img src="images/3.jpeg" alt=""/></div>
+            </div>
+        </div>
+    </div>
+    <div id="hw6-buttons">
+        <h2>Кнопки</h2>
+        <button class="custom-btn" id="button-1">Button 1</button>
+        <button class="custom-btn" id="button-2">Button 2</button>
+        <button class="custom-btn" id="button-3">Button 3</button>
+        <button class="custom-btn button-4" id="button-4"><span>Button 4</span></button>
+    </div>
+    <h2>Уведомления</h2>
+    <div id="clicker"></div>
+    <div class="notification">
+        <div class="notification-badge">1</div>
+        <button id="notification-button" class="notification-button">
+            <img src="images/notification-bell-svgrepo-com.svg" alt="bell">
+        </button>
+        <ul id="notification_list" class="notification-list">
+        </ul>
+    </div>
+    <div class="list-container">
+        <ul class="list"></ul>
+        <button class="add-btn">Добавить пункт</button>
+    </div>
+    <div class="image-container">
+        <img src="images/apollo-15.jpg" alt="Image">
+    </div>
+    <h2>Карточки</h2>
+    <div id="hw6-cards">
+        <div class="card">
+            <img src="images/7.jpeg" alt="...">
+            <div class="card__content">
+                <p class="card__title">Card Title</p>
+                <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/6.webp" alt="...">
+            <div class="card__content">
+                <p class="card__title">Card Title</p>
+                <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/apparat9.jpg" alt="...">
+            <div class="card__content">
+                <p class="card__title">Card Title</p>
+                <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+        </div>
+    </div>
+    <h2>Видео</h2>
+    <div id="hw6-video">
+        <div class="video">
+            <video src="video.mp4" controls></video>
+            <div class="video__description">
+                <h3>Never gonna give you up</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <nav id="nav-footer">
+        <a href="practice7.html" class="nav-link" style="color: white">Посмотреть на новые анимации</a><br/>
+        <i><a href="#header">Вернуться наверх</a></i><br/>  <!--Ссылка на главный заголовок-->
+        <a href="#spacecrafts">Перейти к последнему разделу второго уровня</a><br/>  <!--Ссылка на последний раздел второго уровня-->
+    </nav>
+    <address>
+        Телефон: <a href="tel:+79376306165">+7(937)-630-61-65</a><br/>  <!--Ссылка на телефон-->
+        Почта: <a href="mailto:hitasher@gmail.com">hitasher@gmail.com</a><br/>  <!--Ссылка на почту-->
+    </address>
+</footer>
+<div id="container-scroll"></div>
+<div class="notification-container"></div>
+<script>
+    let menuItems = document.querySelectorAll(".menu-a");
+    let menu = document.getElementById("menu-toggle");
+    for (const menuItem of menuItems) {
+        //add click events to menu items
+        menuItem.addEventListener('click', function(event) {
+            //hide menu if click on menu item
+            menu.checked = false;
+        });
+    }
+    let notifications = document.getElementById('notification_list');
+    let delay = 3000;
+    let isPaused = false;
+    let cnt = 0
+    let new_notification = document.createElement('li');
+    new_notification.classList.add('notification-item');
+    ++cnt;
+    new_notification.textContent = "Notification " + cnt;
+    notifications.appendChild(new_notification);
+    updateNotificationBadge(cnt);
+
+    function add_new_notification() {
+        if (isPaused === false) {
+            let new_notification = document.createElement('li');
+            new_notification.classList.add('notification-item');
+            ++cnt;
+            new_notification.textContent = "Notification " + cnt;
+            notifications.appendChild(new_notification);
+            updateNotificationBadge(cnt);
+        }
+        setTimeout(add_new_notification, delay)
+    }
+
+    setTimeout(add_new_notification, delay)
+
+    function updateNotificationBadge(count) {
+        const badge = document.querySelector('.notification-badge');
+        badge.textContent = count;
+    }
+
+    let notification_button = document.getElementById('notification-button');
+    notification_button.onclick = () => {
+        isPaused = true;
+        setTimeout(() => {isPaused=false}, 10000);
+    };
+
+    function showNotification(content) {
+        const container = document.querySelector('.notification-container');
+        container.textContent = content;
+
+        // Создаем элемент закрытия уведомления
+        let closeBtn = document.createElement('span');
+        closeBtn.className = 'notification-close';
+        closeBtn.innerHTML = '&times;';
+
+        // Добавляем обработчик события для закрытия уведомления
+        closeBtn.addEventListener('click', function () {
+            container.style.opacity = '0';
+        });
+
+        // Добавляем элемент закрытия уведомления в уведомление
+        container.appendChild(closeBtn);
+
+        container.style.opacity = '1';
+        setTimeout(() => container.style.opacity = '0', 5000);
+    }
+
+    let button4 = document.getElementById('button-4');
+    button4.onclick = () => {
+        let message = prompt();
+        showNotification(message);
+    }
+
+    const list = document.querySelector('.list');
+    const addBtn = document.querySelector('.add-btn');
+
+    addBtn.addEventListener('click', () => {
+        const itemContent = prompt('Введите содержимое пункта:');
+        if (itemContent) {
+            const newItem = document.createElement('li');
+            newItem.textContent = itemContent;
+            const subList = document.createElement('ul');
+            newItem.appendChild(subList);
+            list.appendChild(newItem);
+        }
+    });
+
+    const imageContainer = document.querySelector('.image-container');
+    const image = document.querySelector('.image-container img');
+
+    const containerWidth = imageContainer.offsetWidth;
+    const containerHeight = imageContainer.offsetHeight;
+    const imageWidth = image.width;
+    const imageHeight = image.height;
+    const horizontalMargin = (containerWidth - imageWidth) / 2;
+    const verticalMargin = (containerHeight - imageHeight) / 2;
+    image.style.marginLeft = horizontalMargin + 'px';
+    image.style.marginTop = verticalMargin + 'px';
+
+    window.addEventListener('resize', () => {
+        const containerWidth = imageContainer.offsetWidth;
+        const containerHeight = imageContainer.offsetHeight;
+        const imageWidth = image.width;
+        const imageHeight = image.height;
+        const horizontalMargin = (containerWidth - imageWidth) / 2;
+        const verticalMargin = (containerHeight - imageHeight) / 2;
+        image.style.marginLeft = horizontalMargin + 'px';
+        image.style.marginTop = verticalMargin + 'px';
+    });
+
+    let clicker = document.getElementById('clicker');
+
+    window.addEventListener('click', event => {
+        const x = event.clientX;
+        const y = event.clientY;
+        clicker.textContent = x + ", " + y;
+        console.log(x, y);
+    });
+
+    function createNotification(text) {
+        // Создаем элемент уведомления
+        var notification = document.createElement('div');
+        notification.className = 'notification-plus';
+
+        // Добавляем текст уведомления
+        var notificationText = document.createTextNode(text);
+        notification.appendChild(notificationText);
+
+        // Создаем элемент закрытия уведомления
+        var closeBtn = document.createElement('span');
+        closeBtn.className = 'notification-close';
+        closeBtn.innerHTML = '&times;';
+
+        // Добавляем обработчик события для закрытия уведомления
+        closeBtn.addEventListener('click', function () {
+            notification.style.display = 'none';
+        });
+
+        // Добавляем элемент закрытия уведомления в уведомление
+        notification.appendChild(closeBtn);
+
+        // Добавляем уведомление в контейнер
+        var container = document.getElementById('notifications-container');
+        container.appendChild(notification);
+    }
+
+    let btnCounter = 1
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Функция для создания нового элемента
+        function createNewElement() {
+            var containerScroll = document.getElementById('container-scroll');
+            var newItem = document.createElement('button');
+            var br = document.createElement('br')
+            newItem.className = 'button-4 custom-btn';
+            newItem.innerHTML = 'Button ' + btnCounter;
+            containerScroll.appendChild(newItem);
+            containerScroll.appendChild(br);
+            btnCounter++;
+        }
+
+        // Функция для проверки, достигнут ли конец страницы
+        function isEndOfPage() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            var documentHeight = document.documentElement.offsetHeight;
+
+            return scrollTop + windowHeight >= documentHeight - 100;
+        }
+
+        // Обработчик события прокрутки страницы
+        window.addEventListener('scroll', function() {
+            if (isEndOfPage()) {
+                createNewElement();
+            }
+        });
+    });
+</script>
+</body>
+</html>
