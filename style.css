@@ -713,12 +713,6 @@ address > a {
     margin-top: 18px;
 }
 
-input::placeholder, textarea::placeholder {
-    font-weight: bold;
-    opacity: 0.3;
-    color: green;
-}
-
 
 @media (max-width: 800px) {
     #start-section {
