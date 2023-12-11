@@ -2,9 +2,211 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Spacehub</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-$END$
+<header>
+  <section id="header-section">
+    <div id="logo-div">
+      <a href="index.html"><img alt="Логотип сайта" src="favicon.ico"></a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+      <div class='menu-button'></div>
+    </label>
+    <ul class="menu">
+      <li><a class="menu-a" href="spacecrafts.html">Аппараты</a></li>
+      <li><a class="menu-a" href="articles.html">Статьи</a></li>
+      <li><a class="menu-a" href="authorization.html">Авторизация</a></li>
+    </ul>
+  </section>
+</header>
+<main>
+  <section class="article-cards">
+    <section class="article-card">
+      <div class="article-card-header">
+        <div class="article-card-header-left">
+          <img src="images/roscosmos-logo-ru.svg" alt="nasa">
+          <div class="article-card-header-text">
+            <h3>Роскосмос</h3>
+            <p>Сегодня в 9:53</p>
+          </div>
+        </div>
+        <button>Подписаться</button>
+      </div>
+      <div class="article-card-text-content">
+        <h2><a href="">Роскосмос и ESA подписали соглашение о совместной миссии к Юпитеру</a></h2>
+        <img src="images/jupiter.jpg" alt="Изображение статьи">
+        <p>
+          Роскосмос и Европейское космическое агентство (ESA) сегодня подписали историческое соглашение о совместной миссии к Юпитеру. Эта миссия позволит лучше изучить газовый гигант и его луны, открывая новые возможности для наших научных исследований о глубинах солнечной системы.
+        </p>
+        <h3>Роскосмос и ESA ознаменовали новую эру исследования нашей солнечной системы</h3>
+        <p>
+          Роскосмос и Европейское космическое агентство поставили свои подписи под историческим соглашением о совместной миссии к Юпитеру. Планета Юпитер, самый большой газовый гигант в нашей солнечной системе, до сих пор остается загадкой для ученых. Эта новая миссия предоставит уникальную возможность взглянуть на Юпитер с более близкого расстояния, изучить его атмосферные явления, магнитные поля и широкий спектр интересных особенностей, которые могут дать точную информацию о начальных этапах формирования планет и понимании нашей собственной солнечной системы.
+        </p>
+        <h3>Значимость исследований о Юпитере</h3>
+        <img src="images/jupiter-1.jpeg" alt="Изображение статьи">
+        <p>
+          Юпитер имеет глубокие влияние на окружающую среду солнечной системы. Его гравитационное влияние формирует колеца на других газовых гигантах, а также влияет на орбиты астероидов и транснептуновых объектов. Изучение атмосферы Юпитера поможет нам лучше понять процессы, которые привели к формированию нашей собственной планеты. Кроме того, это также даст ценные знания о возможных условиях для жизни в наших исследуемых экзопланетах.
+        </p>
+        <h3>Новые технологии и инструменты, используемые в миссии</h3>
+        <p>
+          Миссия к Юпитеру будет использовать набор передовых технологий и инструментов для улучшения наших наблюдений и сбора данных. Один из главных инструментов, который используется в миссии, - это детектор-мас-спектрометр. Он предназначен для анализа химического состава атмосферы Юпитера, различных газовых компонентов и наличия следовых элементов. Миссия также будет использовать специализированные камеры высокого разрешения для осуществления детальных снимков планеты и ее лун.
+        </p>
+        <img src="images/technology.jpeg" alt="Изображение статьи">
+        <p>
+          Проведение совместной миссии Роскосмоса и ESA к Юпитеру представляет собой значимое событие в исследовании нашей солнечной системы. Оно откроет новые пути для лучшего понимания формирования и развития гигантских планет и их влияния на окружающий космос. Использование передовых технологий и инструментов позволит ученым вести более детальные и комплексные исследования Юпитера и его природы, расширяя наши знания о нашей солнечной системе и других галактиках.
+        </p>
+      </div>
+      <div class='article-card-footer'>
+        <div class="like-div" onmouseover="hoverLike(this)" onmouseout="hoverOutLike(this)" onclick="clickLike(this)">
+          <img class="like" src="images/like0.png" alt="Количество лайков">
+          <p class="like-counter">29</p>
+        </div>
+        <img class="comments-img" src="images/comments.png" alt="Комментарии">
+        <p class="comments-counter">2</p>
+        <img class="share-img" src="images/share.png" alt="Поделиться">
+      </div>
+    </section>
+
+  </section>
+  <section class="comments">
+    <h2>2 комментария</h2>
+    <div class="comment-container">
+      <label for="comment-input"></label>
+      <textarea onkeyup="textAreaAdjust(this)" style="overflow:hidden" id="comment-input" class="comment-input" placeholder="Введите комментарий"></textarea>
+      <button id="comment-button" class="comment-button" onclick="publishComment()">Отправить</button>
+    </div>
+
+    <div class="comment">
+      <div class="comment-author">
+        <img class="avatar" src="images/avatar-2.png" alt="Аватар">
+        <div class="comment-author-text">
+          <h3>Аноним</h3>
+          <p class="comment-time">5 минут назад</p>
+        </div>
+      </div>
+      <p class="comment-text">Текст комментария</p>
+      <div class="like-div" onmouseover="hoverLike(this)" onmouseout="hoverOutLike(this)" onclick="clickLike(this)">
+        <img class="like" src="images/like0.png" alt="Количество лайков">
+        <p class="like-counter">0</p>
+      </div>
+    </div>
+    <div class="comment-author">
+      <img class="avatar" src="images/avatar-1.jpg" alt="Аватар">
+      <div class="comment-author-text">
+        <h3>Аноним</h3>
+        <p class="comment-time">32 минуты назад</p>
+      </div>
+    </div>
+    <p class="comment-text">Текст комментария</p>
+    <div class="like-div" onmouseover="hoverLike(this)" onmouseout="hoverOutLike(this)" onclick="clickLike(this)">
+      <img class="like" src="images/like0.png" alt="Количество лайков">
+      <p class="like-counter">7</p>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="inner-footer">
+    <div class="footer-left">
+      <h3>Контакты</h3>
+      <p>+7-(937)-630-61-65</p>
+      <p>hitasher@gmail.com</p>
+    </div>
+    <div class="footer-middle">
+      <h3>Ссылки</h3>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="spacecrafts.html">Аппараты</a></li>
+        <li><a href="articles.html">Статьи</a></li>
+        <li><a href="authorization.html">Авторизация</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <h3>Подпишитесь</h3>
+      <label>
+        <input type="email" placeholder="Введите ваш email">
+      </label>
+      <button>Подписаться</button>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; 2023 Spacehub</p>
+</footer>
 </body>
+<script>
+  function hoverLike(div) {
+    let likeImage = div.querySelector('.like');
+    if (!likeImage.classList.contains('liked')) {
+      div.style.color = "red";
+      likeImage.src = "images/like2.png";
+    }
+  }
+  function hoverOutLike(div) {
+    let likeImage = div.querySelector('.like');
+    if (!likeImage.classList.contains('liked')) {
+      div.style.color = "#bbb";
+      likeImage.src = "images/like0.png";
+    }
+  }
+  function clickLike(div) {
+    let likeImage = div.querySelector('.like');
+    let likeCounter = div.querySelector('.like-counter');
+    let numberOfLikes = Number.parseInt(likeCounter.textContent);
+    if (likeImage.classList.contains('liked')) {
+      likeImage.classList.remove('liked');
+      likeImage.src = "images/like2.png";
+      --numberOfLikes;
+    } else {
+      likeImage.classList.add('liked');
+      likeImage.src = "images/like3.png";
+      ++numberOfLikes;
+    }
+    likeCounter.textContent = numberOfLikes;
+  }
+  const commentInput = document.getElementById("comment-input");
+  const commentButton = document.getElementById("comment-button");
+
+  commentInput.addEventListener("input", function () {
+    if (commentInput.value.trim() !== "") {
+      commentButton.style.display = "block";
+    } else {
+      commentButton.style.display = "none";
+    }
+  });
+  function textAreaAdjust(element) {
+    element.style.height = "1px";
+    element.style.height = (48+element.scrollHeight)+"px";
+  }
+  textAreaAdjust(document.querySelector('.comment-input'))
+  function publishComment() {
+    let commentInput = document.querySelector('.comment-input');
+    const newCommentDiv = document.createElement("div");
+    newCommentDiv.setAttribute("class", "comment");
+    newCommentDiv.innerHTML = `
+        <div class="comment-author">
+          <img class="avatar" src="images/avatar-1.jpg" alt="Аватар">
+          <div class="comment-author-text">
+            <h3>Аноним</h3>
+            <p class="comment-time">Только что</p>
+          </div>
+        </div>
+        <p class="comment-text">Текст комментария</p>
+        <div class="like-div" onmouseover="hoverLike(this)" onmouseout="hoverOutLike(this)" onclick="clickLike(this)">
+          <img class="like" src="images/like0.png" alt="Количество лайков">
+          <p class="like-counter">0</p>
+        </div>
+      `;
+    let newCommentText = newCommentDiv.querySelector('.comment-text');
+    newCommentText.textContent = commentInput.value;
+    commentInput.value = "";
+    let firstComment = document.querySelector('.comment');
+    firstComment.insertAdjacentElement('beforebegin', newCommentDiv);
+  }
+</script>
 </html>
